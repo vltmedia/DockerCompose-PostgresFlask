@@ -6,5 +6,7 @@
 
 ## Customization
 
+### docker-compose.yml:
+
 - Change the LEFT Ports to change the public port on the host pc.
 - POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD, Change to whatever you want. These are your admin credentials.
