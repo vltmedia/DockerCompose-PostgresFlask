@@ -1,5 +1,5 @@
 ## Quick Start
-1. Run ``docker-compoe up`` in the top level of the folder.
+1. Run ``docker-compose up`` in the top level of the folder.
 2. Open up ``<ip>:8104`` for Postgres editing
 3. Open /Call ``<ip>:5274`` for Flask api.
 4. Call ``<ip>:5284`` for Postgres Query.
