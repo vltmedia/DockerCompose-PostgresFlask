@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  flask-service:
+    build: ./flaskapp  # path is relative to docker-compose.yml localtion
+    restart: always
+    volumes:
+      - ./flaskapp:/usr/src/app # mount point
+    ports:
+      - 5274:80  # host:container
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./postgres/postgres-data:/var/lib/postgresql/data
+    ports:
+      - 5284:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8104:8080
